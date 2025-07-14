@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "module": "esnext",
+    "noEmit": false,
+    "target": "esnext",
+    "lib": ["esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "incremental": true,
+    "outDir": "./build",
+    "rootDir": "./src",
+    "paths": {
+      "@types": ["common/types"],
+      "@repositories": ["repositories"],
+      "@helpers": ["helpers"],
+      "@services": ["services"]
+    }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"],
+  "ts-node": {
+    "esm": true,
+    "require": ["tsconfig-paths/register"]
+  }
+}
+
