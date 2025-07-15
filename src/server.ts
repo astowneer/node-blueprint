@@ -1,11 +1,12 @@
 import express from 'express';
 
 const app = express();
+app.disable('x-powered-by');
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
+app.get('/', (request, response) => {
+  response.send('Hello World!');
 });
 
-app.listen(3001, () => {
-  console.log('App started on port 3001');
-});
+const PORT = 3001;
+
+app.listen(PORT, () => {});

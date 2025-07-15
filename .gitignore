@@ -10,12 +10,13 @@
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
 *.pem
 
-# log 
+# log
 /logs
 
 # debug
@@ -35,3 +36,9 @@ yarn-error.log*
 
 # logs
 *.log
+
+# IDE settings
+.vscode
+
+# Mac files
+.DS_Store

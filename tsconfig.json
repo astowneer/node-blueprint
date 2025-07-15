@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "rootDir": ".",
     "baseUrl": "src",
     "module": "esnext",
     "noEmit": false,
@@ -15,7 +16,6 @@
     "isolatedModules": true,
     "incremental": true,
     "outDir": "./build",
-    "rootDir": "./src",
     "paths": {
       "@types": ["common/types"],
       "@repositories": ["repositories"],
@@ -23,11 +23,11 @@
       "@services": ["services"]
     }
   },
-  "include": ["src"],
-  "exclude": ["node_modules"],
+  "include": ["**/*.ts", "**/*.js", "prettier.config.mjs"],
+  "exclude": ["node_modules", "apps", "packages"],
+  "files": ["packages.d.ts"],
   "ts-node": {
     "esm": true,
     "require": ["tsconfig-paths/register"]
   }
 }
-
